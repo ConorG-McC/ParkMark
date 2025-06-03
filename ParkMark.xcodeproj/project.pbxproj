@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		02EB4C392DEE5CB100DAE403 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EB4C382DEE5CB100DAE403 /* WidgetKit.framework */; };
+		02EB4C3B2DEE5CB100DAE403 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EB4C3A2DEE5CB100DAE403 /* SwiftUI.framework */; };
+		02EB4C4A2DEE5CB200DAE403 /* ParkMarkWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 02EB4C362DEE5CB100DAE403 /* ParkMarkWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		02EB4C102DEE5AEB00DAE403 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,17 +27,70 @@
 			remoteGlobalIDString = 02EB4C012DEE5AEA00DAE403;
 			remoteInfo = ParkMark;
 		};
+		02EB4C482DEE5CB200DAE403 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02EB4BFA2DEE5AEA00DAE403 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02EB4C352DEE5CB100DAE403;
+			remoteInfo = ParkMarkWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		02EB4C4F2DEE5CB200DAE403 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				02EB4C4A2DEE5CB200DAE403 /* ParkMarkWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		02EB4C022DEE5AEA00DAE403 /* ParkMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02EB4C0F2DEE5AEB00DAE403 /* ParkMarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkMarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02EB4C192DEE5AEB00DAE403 /* ParkMarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkMarkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02EB4C362DEE5CB100DAE403 /* ParkMarkWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ParkMarkWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		02EB4C382DEE5CB100DAE403 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		02EB4C3A2DEE5CB100DAE403 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		025931F42DEEA5E900B4BDAF /* Exceptions for "ParkMarkWidget" folder in "ParkMark" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+			);
+			target = 02EB4C012DEE5AEA00DAE403 /* ParkMark */;
+		};
+		02EB4C4B2DEE5CB200DAE403 /* Exceptions for "ParkMarkWidget" folder in "ParkMarkWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 02EB4C352DEE5CB100DAE403 /* ParkMarkWidget */;
+		};
+		02EB4C522DEE5DC200DAE403 /* Exceptions for "ParkMark" folder in "ParkMarkWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				Models/CarPark.swift,
+				Models/SharedDefaults.swift,
+			);
+			target = 02EB4C352DEE5CB100DAE403 /* ParkMarkWidget */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		02EB4C042DEE5AEA00DAE403 /* ParkMark */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				02EB4C522DEE5DC200DAE403 /* Exceptions for "ParkMark" folder in "ParkMarkWidget" target */,
+			);
 			path = ParkMark;
 			sourceTree = "<group>";
 		};
@@ -43,6 +102,15 @@
 		02EB4C1C2DEE5AEB00DAE403 /* ParkMarkUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ParkMarkUITests;
+			sourceTree = "<group>";
+		};
+		02EB4C3C2DEE5CB100DAE403 /* ParkMarkWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				025931F42DEEA5E900B4BDAF /* Exceptions for "ParkMarkWidget" folder in "ParkMark" target */,
+				02EB4C4B2DEE5CB200DAE403 /* Exceptions for "ParkMarkWidget" folder in "ParkMarkWidget" target */,
+			);
+			path = ParkMarkWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +137,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		02EB4C332DEE5CB100DAE403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02EB4C3B2DEE5CB100DAE403 /* SwiftUI.framework in Frameworks */,
+				02EB4C392DEE5CB100DAE403 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +155,8 @@
 				02EB4C042DEE5AEA00DAE403 /* ParkMark */,
 				02EB4C122DEE5AEB00DAE403 /* ParkMarkTests */,
 				02EB4C1C2DEE5AEB00DAE403 /* ParkMarkUITests */,
+				02EB4C3C2DEE5CB100DAE403 /* ParkMarkWidget */,
+				02EB4C372DEE5CB100DAE403 /* Frameworks */,
 				02EB4C032DEE5AEA00DAE403 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +167,18 @@
 				02EB4C022DEE5AEA00DAE403 /* ParkMark.app */,
 				02EB4C0F2DEE5AEB00DAE403 /* ParkMarkTests.xctest */,
 				02EB4C192DEE5AEB00DAE403 /* ParkMarkUITests.xctest */,
+				02EB4C362DEE5CB100DAE403 /* ParkMarkWidget.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		02EB4C372DEE5CB100DAE403 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02EB4C382DEE5CB100DAE403 /* WidgetKit.framework */,
+				02EB4C3A2DEE5CB100DAE403 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +191,12 @@
 				02EB4BFE2DEE5AEA00DAE403 /* Sources */,
 				02EB4BFF2DEE5AEA00DAE403 /* Frameworks */,
 				02EB4C002DEE5AEA00DAE403 /* Resources */,
+				02EB4C4F2DEE5CB200DAE403 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				02EB4C492DEE5CB200DAE403 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				02EB4C042DEE5AEA00DAE403 /* ParkMark */,
@@ -163,6 +254,28 @@
 			productReference = 02EB4C192DEE5AEB00DAE403 /* ParkMarkUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		02EB4C352DEE5CB100DAE403 /* ParkMarkWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02EB4C4C2DEE5CB200DAE403 /* Build configuration list for PBXNativeTarget "ParkMarkWidget" */;
+			buildPhases = (
+				02EB4C322DEE5CB100DAE403 /* Sources */,
+				02EB4C332DEE5CB100DAE403 /* Frameworks */,
+				02EB4C342DEE5CB100DAE403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				02EB4C3C2DEE5CB100DAE403 /* ParkMarkWidget */,
+			);
+			name = ParkMarkWidget;
+			packageProductDependencies = (
+			);
+			productName = ParkMarkWidgetExtension;
+			productReference = 02EB4C362DEE5CB100DAE403 /* ParkMarkWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +297,9 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 02EB4C012DEE5AEA00DAE403;
 					};
+					02EB4C352DEE5CB100DAE403 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = 02EB4BFD2DEE5AEA00DAE403 /* Build configuration list for PBXProject "ParkMark" */;
@@ -203,6 +319,7 @@
 				02EB4C012DEE5AEA00DAE403 /* ParkMark */,
 				02EB4C0E2DEE5AEB00DAE403 /* ParkMarkTests */,
 				02EB4C182DEE5AEB00DAE403 /* ParkMarkUITests */,
+				02EB4C352DEE5CB100DAE403 /* ParkMarkWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +340,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		02EB4C172DEE5AEB00DAE403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02EB4C342DEE5CB100DAE403 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +377,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		02EB4C322DEE5CB100DAE403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +396,11 @@
 			isa = PBXTargetDependency;
 			target = 02EB4C012DEE5AEA00DAE403 /* ParkMark */;
 			targetProxy = 02EB4C1A2DEE5AEB00DAE403 /* PBXContainerItemProxy */;
+		};
+		02EB4C492DEE5CB200DAE403 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02EB4C352DEE5CB100DAE403 /* ParkMarkWidget */;
+			targetProxy = 02EB4C482DEE5CB200DAE403 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,16 +531,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = ParkMark/ParkMark.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8K49SAU5MV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,9 +553,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cgmcc.ParkMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -423,16 +569,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = ParkMark/ParkMark.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8K49SAU5MV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,9 +591,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cgmcc.ParkMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -518,6 +674,76 @@
 			};
 			name = Release;
 		};
+		02EB4C4D2DEE5CB200DAE403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ParkMarkWidget/ParkMarkWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8K49SAU5MV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParkMarkWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ParkMarkWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cgmcc.ParkMark.ParkMarkWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		02EB4C4E2DEE5CB200DAE403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ParkMarkWidget/ParkMarkWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8K49SAU5MV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParkMarkWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ParkMarkWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cgmcc.ParkMark.ParkMarkWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +779,15 @@
 			buildConfigurations = (
 				02EB4C2A2DEE5AEB00DAE403 /* Debug */,
 				02EB4C2B2DEE5AEB00DAE403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02EB4C4C2DEE5CB200DAE403 /* Build configuration list for PBXNativeTarget "ParkMarkWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02EB4C4D2DEE5CB200DAE403 /* Debug */,
+				02EB4C4E2DEE5CB200DAE403 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
